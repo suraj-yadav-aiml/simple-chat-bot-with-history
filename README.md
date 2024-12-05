@@ -8,6 +8,9 @@ A simple and intuitive chatbot application built using **Streamlit** and **LangC
 - **Chat History**: Maintains user-specific chat history using an SQLite database.
 - **User-Friendly UI**: Built with Streamlit for a modern and attractive interface.
 - **Customizable Settings**: Allows users to start new conversations and manage chat history.
+- **Export Conversations**:
+  - Download chat conversations as **text files** for offline storage.
+  - Download chat conversations as **PDF files** with well-formatted structure,
 
 
 
@@ -21,6 +24,7 @@ project_directory/
 │   ├── assistant.py                  # ChatAssistant class implementation
 │   ├── config.py                     # Configuration constants like BASE_URL, MODEL, DB_CONNECTION
 │   └── history.py                    # ChatHistoryManager class for managing history
+|   └── expoter.py                    # ChatExporter class for downloading the conersations as text or pdf
 │
 ├── streamlit_app/                    # Contains the Streamlit app files
 │   ├── __init__.py                   # Optional, if multiple app modules are needed
