@@ -64,7 +64,7 @@ project_directory/
 
 Clone the project from GitHub:
 ```bash
-git clone https://github.com/your-username/simple-chat-bot-with-history.git
+git clone https://github.com/suraj-yadav-aiml/simple-chat-bot-with-history
 cd simple-chat-bot-with-history
 ```
 
