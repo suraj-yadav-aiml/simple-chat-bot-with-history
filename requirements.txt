@@ -3,3 +3,4 @@ langchain-core
 langchain-community
 langchain-ollama
 streamlit
+reportlab
