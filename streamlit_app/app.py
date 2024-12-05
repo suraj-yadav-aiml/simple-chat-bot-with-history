@@ -59,18 +59,10 @@ if user_input:
 
     # Generate response using the assistant
     with st.chat_message("assistant"):
-        response_placeholder = st.empty()
-        full_response = ""
-
         try:
-            for chunk in assistant.runnable_with_history.stream(
-                {"input": user_input},
-                config={"configurable": {"session_id": user_id}}
-            ):
-                full_response += chunk
-                response_placeholder.markdown(full_response)
+            full_response = st.write_stream(assistant.chat_stream(session_id=user_id,user_input=user_input))
         except Exception as e:
-            response_placeholder.markdown(f"Error: {e}")
+            raise ValueError(f"Error: {e}")
 
     # Save assistant's response to chat history
     st.session_state.chat_history.append({
